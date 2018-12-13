@@ -16,5 +16,11 @@
         Hello World!
     </center>
 </h1>
+<hr>
+<form action="struts.action" method="post">
+    情输入姓名：<input type="text" name="name">
+    <br>
+    <input type="submit" value="提交">
+</form>
 </body>
 </html>
