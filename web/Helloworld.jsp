@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: liupeng
@@ -17,10 +18,16 @@
     </center>
 </h1>
 <hr>
-<form action="struts.action" method="post">
+<%--<form action="struts.action" method="post">
     情输入姓名：<input type="text" name="name">
     <br>
     <input type="submit" value="提交">
-</form>
+</form>--%>
+
+<s:form action="struts" method="POST">
+<s:textfield name="name" label="请输入姓名"></s:textfield>
+<s:submit value="提交"></s:submit>
+</s:form>
+
 </body>
 </html>

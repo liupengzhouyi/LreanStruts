@@ -5,11 +5,19 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
+    <!--包名必须唯一-->
     <package name="default" extends="struts-default">
+        <!--一个 Action-->
+        <!--这个 Action 的名字是 struts
+        这个 Action 中的 class 属性的 指向的方法 是 action.StrutsAction-->
         <action name="struts" class="action.StrutsAction">
+            <!--这个 Action 会 返回三种 结果
+            或有三个跳转的页面-->
             <result name="error"> Helloworld.jsp </result>
             <result name="input"> Helloworld.jsp </result>
             <result name="success"> welcome.jsp</result>
         </action>
     </package>
+
+
 </struts>
