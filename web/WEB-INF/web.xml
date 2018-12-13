@@ -18,7 +18,7 @@
 
     <!--设置程序的打开文件，即首选文件-->
     <welcome-file-list>
-        <welcome-file>Helloworld.jsp</welcome-file>
+        <welcome-file>/validation_date01/validate_form.jsp</welcome-file>
     </welcome-file-list>
 
     <!--创建一个过滤器 让每个请求 被 Struts 2 框架 来处理-->
