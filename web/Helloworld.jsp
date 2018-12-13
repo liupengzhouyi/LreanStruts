@@ -24,7 +24,8 @@
     <input type="submit" value="提交">
 </form>--%>
 
-<s:form action="struts" method="POST">
+<%--validate="false"关闭客户端验证--%>
+<s:form validate="false" action="struts" method="POST">
 <s:textfield name="name" label="请输入姓名"></s:textfield>
 <s:submit value="提交"></s:submit>
 </s:form>

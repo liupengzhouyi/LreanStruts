@@ -1,0 +1,51 @@
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.2//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+<validators>
+    <!--需要校验的字段名称-->
+    <field name="name">
+        <!--验证字符串不可以为空，必填项-->
+        <field-validator type="requiredstring">
+            <!--去空格-->
+            <param name="trim">true</param>
+            <!--错误信息-->
+            <message>请填写用户名!!!</message>
+        </field-validator>
+    </field>
+</validators>
+
+        <!--<field name="name">
+                <field-validator type="requiredstring">
+                    <param name="trim">true</param>
+                    <message>请填写用户名</message>
+                </field-validator>
+                <field-validator type="stringlength">
+                    <param name="minLength">4</param>
+                    <param name="maxLength">32</param>
+                    <message>用户名长度应在4到32个字符间</message>
+                </field-validator>
+            </field>-->
+        <!--<field name="pass">
+            <field-validator type="requiredstring">
+                <message>请填写密码</message>
+            </field-validator>
+            <field-validator type="stringlength">
+                <param name="minLength">6</param>
+                <param name="maxLength">32</param>
+                <message>为了您账号的安全，请设置6个字母以上的密码（最长可设置32个字母）</message>
+            </field-validator>
+        </field>
+        <field name="age">
+            <field-validator type="int">
+                <param name="min">1</param>
+                <param name="max">70</param>
+                <message>请输入1-70之间</message>
+            </field-validator>
+        </field>
+        <field name="birth">
+            <field-validator type="date">
+                <param name="min">1900-01-01</param>
+                <param name="max">2050-02-21</param>
+                <message>生日必须在{min}到{max}之间</message>
+            </field-validator>
+        </field>-->
