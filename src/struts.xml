@@ -6,23 +6,45 @@
 
 <struts>
     <!--包名必须唯一-->
-    <package name="default" extends="struts-default" namespace="/">
+    <package name="demo" extends="struts-default" namespace="/">
         <!--一个 Action-->
         <!--这个 Action 的名字是 struts 这个 Action 中的 class 属性的 指向的方法 是 action.StrutsAction-->
         <action name="struts" class="action.StrutsAction">
             <!--这个 Action 会 返回三种 结果
             或有三个跳转的页面-->
-            <result name="error"> Helloworld.jsp </result>
-            <result name="input"> Helloworld.jsp </result>
-            <result name="success"> welcome.jsp</result>
+            <result name="error">
+                ../web/action02/Helloworld.jsp
+            </result>
+            <result name="input">
+                ../web/action02/Helloworld.jsp
+            </result>
+            <result name="success">
+                ../web/action02/welcome.jsp
+            </result>
         </action>
     </package>
 
 
-    <package name="date01" extends="struts-default" namespace="/validation_date01">
+    <package name="date01" extends="struts-default" namespace="/validation_date01/">
         <action name="new_validate" class="action1.NewValidateAction">
-            <result name="input" > validate_form.jsp </result>
-            <result name="success" > validate_form.jsp </result>
+            <result name="input" >
+                validate_form.jsp
+            </result>
+            <result name="success" >
+                validate_form.jsp
+            </result>
+        </action>
+    </package>
+
+
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="submit" class="action3.MoreSubmitAction">
+            <result name="save">
+                /action03/result.jsp
+            </result>
+            <result name="print">
+                /action03/result.jsp
+            </result>
         </action>
     </package>
 
