@@ -9,8 +9,10 @@
       <root url="jar://$PROJECT_DIR$/lib/commons-lang.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/struts2-core.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/freemarker.jar!/" />
+      <root url="file://D:/soft/Apache Software Foundation/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <jarDirectory url="file://D:/soft/Apache Software Foundation/lib" recursive="false" />
   </library>
 </component>
