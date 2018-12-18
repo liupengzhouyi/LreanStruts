@@ -13,13 +13,13 @@
             <!--这个 Action 会 返回三种 结果
             或有三个跳转的页面-->
             <result name="error">
-                ../web/action02/Helloworld.jsp
+                /action02/Helloworld.jsp
             </result>
             <result name="input">
-                ../web/action02/Helloworld.jsp
+                /action02/Helloworld.jsp
             </result>
             <result name="success">
-                ../web/action02/welcome.jsp
+                /action02/welcome.jsp
             </result>
         </action>
     </package>
@@ -48,4 +48,13 @@
         </action>
     </package>
 
+    <package name="helloworld" extends="struts-default">
+        <action name="hello"
+                class="HelloWorldAction.HelloWord"
+                method="exectue">
+            <result name="success">
+                /HelloWorldAction/HelloWord.jsp
+            </result>
+        </action>
+    </package>
 </struts>
