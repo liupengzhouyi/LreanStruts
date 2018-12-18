@@ -2,13 +2,12 @@ package action3;
 
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.ServletRequestAware;
-
 import javax.servlet.http.HttpServletRequest;
 
 public class MoreSubmitAction extends ActionSupport implements ServletRequestAware {
 
     private String msg;
-    private javax.servlet.http.HttpServletRequest httpServletRequest;
+    private HttpServletRequest httpServletRequest;
 
     @Override
     public void setServletRequest(HttpServletRequest httpServletRequest) {

@@ -12,7 +12,7 @@
     <title>一个表单有多个提交</title>
 </head>
 <body>
-    <s:form action="submit">
+    <s:form action="submit.action">
         <s:textfield name="msg" label="输入内容" />
         <s:submit name="save" value="保存" align="left" method="save" />
         <s:submit name="print" value="打印" align="left" method="print" />

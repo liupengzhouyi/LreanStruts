@@ -4,6 +4,9 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
+
+
+
 <struts>
     <!--包名必须唯一-->
     <package name="demo" extends="struts-default" namespace="/">
@@ -25,19 +28,19 @@
     </package>
 
 
-    <package name="date01" extends="struts-default" namespace="/validation_date01/">
+    <package name="date01" extends="struts-default">
         <action name="new_validate" class="action1.NewValidateAction">
             <result name="input" >
-                validate_form.jsp
+                /validation_date01/validate_form.jsp
             </result>
             <result name="success" >
-                validate_form.jsp
+                /validation_date01/validate_form.jsp
             </result>
         </action>
     </package>
 
 
-    <package name="default" extends="struts-default" namespace="/">
+    <package name="default" extends="struts-default">
         <action name="submit" class="action3.MoreSubmitAction">
             <result name="save">
                 /action03/result.jsp
@@ -48,13 +51,13 @@
         </action>
     </package>
 
+
     <package name="helloworld" extends="struts-default">
-        <action name="hello"
-                class="HelloWorldAction.HelloWord"
-                method="exectue">
+        <action name="hello" class="HelloWorldAction.HelloWord" method="exectue">
             <result name="success">
                 /HelloWorldAction/HelloWord.jsp
             </result>
         </action>
     </package>
+
 </struts>
