@@ -2,19 +2,21 @@ package validationNumber;
 
 public class Number {
 
-    private int number;
+    private String number;
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
     public String whatNumber() {
-        if (number == 666) {
+        if (number.equals("666")) {
             return "sixsixsix";
+        } else if (number.equals("665")) {
+            return "sixsixfvive";
         } else {
             return "dome";
         }

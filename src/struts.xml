@@ -74,16 +74,34 @@
 
 
     <package name="number" extends="struts-default">
+        <!--注册拦截器-->
+        <interceptors>
+            <interceptor name="MyInterceptor" class="validationNumber.MyInterceptor"/>
+        </interceptors>
+
         <action name="ValidationNumber" class="validationNumber.Number" method="whatNumber">
+
             <result name="input">
                 /validationNumber/input.jsp
             </result>
             <result name="sixsixsix">
                 /validationNumber/666.jsp
             </result>
+            <result name="sixsixfvive">
+                /validationNumber/665.jsp
+            </result>
             <result name="dome">
                 /validationNumber/dome.jsp
             </result>
+            <result name="error">
+                /validationNumber/error.jsp
+            </result>
+
+            <!--拦截器配置在result后面-->
+            <!--使用系统的拦截栈-->
+            <interceptor-ref name="defaultStack" />
+            <!--使用自定义拦截器-->
+            <interceptor-ref name="MyInterceptor" />
         </action>
     </package>
 </struts>

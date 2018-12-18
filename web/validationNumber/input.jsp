@@ -15,9 +15,9 @@
         Pleac Input your Number
     </h1>
 <hr>
-    <form>
+    <form action="ValidationNumber.action">
         Input&nbsp;your&nbsp;number
-        <input type="number" name="number">
+        <input type="text" name="number">
         <input type="submit" value="Submit">
     </form>
 </body>
