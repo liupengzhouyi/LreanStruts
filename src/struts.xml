@@ -25,6 +25,18 @@
                 /action02/welcome.jsp
             </result>
         </action>
+
+        <action name="findLiupeng" class="action4.FunvtionAction" method="find">
+            <result name="input">
+                /action04/input.jsp
+            </result>
+            <result name="liupeng">
+                /action04/HelloLiupeng.jsp
+            </result>
+            <result name="someOne">
+                /action04/HelloSomeOne.jsp
+            </result>
+        </action>
     </package>
 
 
@@ -60,4 +72,18 @@
         </action>
     </package>
 
+
+    <package name="number" extends="struts-default">
+        <action name="ValidationNumber" class="validationNumber.Number" method="whatNumber">
+            <result name="input">
+                /validationNumber/input.jsp
+            </result>
+            <result name="sixsixsix">
+                /validationNumber/666.jsp
+            </result>
+            <result name="dome">
+                /validationNumber/dome.jsp
+            </result>
+        </action>
+    </package>
 </struts>
