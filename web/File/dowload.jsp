@@ -11,6 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-    <a href="dowLoad.action?fileName=屏幕快照 2018-12-18 下午6.56.54.png">屏幕快照 2018-12-18 下午6.56.54.png</a>
+
+    <a href="downLoad.action?downPath=/Users/liupeng/TempFile/屏幕快照 2018-12-18 下午4.07.34.png">dowload</a>
+
 </body>
 </html>

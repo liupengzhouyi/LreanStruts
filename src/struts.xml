@@ -134,17 +134,27 @@
         </action>
     </package>
 
-    <package name="dowloadFile" extends="struts-default">
+    <package name="dowload" namespace="/" extends="struts-default">
+        <action name="downLoad" class="File.DownloadAction">
+            <!--结果类型为String-->
+            <result type="stream">
 
-        <action name="dowLoad" class="File.DownloadAction">
-            <result name="success" type="stream">
-                <param name="inputName">fileInput</param>
-                <param name="contentDisposition">attachment;filename="$(fileName)"</param>
-            </result>
-            <result name="input">
-                /File/dowload.jsp
-            </result>
+                <param name="contentType">${contentType}</param>
+                <!--默认就是inputStream,它将会指示StreamResult通过
+                  inputName属性值的getter和setter方法，如这里就是
+                  getInputStream()来获取下载文件的内容,意味着Action
+                  要有这个方法
+                  -->
+                <param name="inputName">inputStream</param>
+                <!--默认为inline（在线打开）,设置为attachment将会告诉浏览器下载
+                    该文件,filename指定下载文件时的文件名，若未指定将会以浏览器
+                    页面名作为文件名,如：以download.action作为文件名
+                  -->
+                <param name="contentDisposition">attachment;filename=${filename}</param>
+                <!--指定下载文件的缓冲大小-->
+                <param name="bufferSize">4096</param>
 
+            </result>
         </action>
     </package>
 
