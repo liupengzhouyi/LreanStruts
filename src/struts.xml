@@ -123,6 +123,17 @@
         </action>
     </package>
 
+    <package name="uploadFiles" extends="struts-default">
+        <action name="uploads" class="File.FilesUploadAction">
+            <result name="success">
+                /File/success.jsp
+            </result>
+            <result name="input">
+                /File/index.jsp
+            </result>
+        </action>
+    </package>
+
     <package name="dowloadFile" extends="struts-default">
 
         <action name="dowLoad" class="File.DownloadAction">
