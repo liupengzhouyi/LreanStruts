@@ -11,7 +11,10 @@ public class UploadAction extends ActionSupport {
     private File file;
 
     //上传文件名字
-    private String UploadFileName;
+    private String fileFileName;
+
+    //上传文件类型
+    private String fileFileType;
 
     public File getFile() {
         return file;
@@ -22,25 +25,33 @@ public class UploadAction extends ActionSupport {
         System.out.println(file.getAbsolutePath());
     }
 
-    public String getUploadFileName() {
-        return UploadFileName;
+    public String getFileFileName() {
+        return fileFileName;
     }
 
-    public void setUploadFileName(String uploadFileName) {
-        UploadFileName = uploadFileName;
+    public void setFileFileName(String fileFileName) {
+        this.fileFileName = fileFileName;
+    }
+
+    public String getFileFileType() {
+        return fileFileType;
+    }
+
+    public void setFileFileType(String fileFileType) {
+        this.fileFileType = fileFileType;
     }
 
     public String execute() throws Exception {
 
         System.out.println(getFile().getAbsolutePath());
+        System.out.println(getFile());
 
         //根据上传的文件的到输入流
         InputStream inputStream = new FileInputStream(getFile());
 
-
-
         //指定输出流地址
-        OutputStream outputStream = new FileOutputStream("D:\\Code\\tempFile\\" + getUploadFileName());
+        OutputStream outputStream = new FileOutputStream("/Users/liupeng/TempFile/" + getFileFileName());
+        System.out.println("FileName:" + getFileFileName());
 
         byte buffer[] = new byte[1024];
 

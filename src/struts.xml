@@ -8,6 +8,12 @@
 
 
 <struts>
+    <!-- 设置该应用使用的编码集为utf-8 -->
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+
+    <!-- 设置文件上传大小 -->
+    <constant name="struts.multipart.maxSize" value="1000000000" />
+
     <!--包名必须唯一-->
     <package name="demo" extends="struts-default" namespace="/">
         <!--一个 Action-->
@@ -106,14 +112,14 @@
     </package>
 
     <package name="uploadFile" extends="struts-default">
-        <action name="upload" class="File.UploadAction">
-            <result name="success">
-                /File/success.jsp
-            </result>
-            <result name="input">
-                /File/index.jsp
-            </result>
-        </action>
-    </package>
+    <action name="upload" class="File.UploadAction">
+        <result name="success">
+            /File/success.jsp
+        </result>
+        <result name="input">
+            /File/index.jsp
+        </result>
+    </action>
+</package>
 
 </struts>
