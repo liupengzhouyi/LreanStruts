@@ -111,15 +111,32 @@
         </action>
     </package>
 
+    <!--upload file-->
     <package name="uploadFile" extends="struts-default">
-    <action name="upload" class="File.UploadAction">
-        <result name="success">
-            /File/success.jsp
-        </result>
-        <result name="input">
-            /File/index.jsp
-        </result>
-    </action>
-</package>
+        <action name="upload" class="File.UploadAction">
+            <result name="success">
+                /File/success.jsp
+            </result>
+            <result name="input">
+                /File/index.jsp
+            </result>
+        </action>
+    </package>
+
+    <package name="dowloadFile" extends="struts-default">
+
+        <action name="dowLoad" class="File.DownloadAction">
+            <result name="success" type="stream">
+                <param name="inputName">fileInput</param>
+                <param name="contentDisposition">attachment;filename="$(fileName)"</param>
+            </result>
+            <result name="input">
+                /File/dowload.jsp
+            </result>
+
+        </action>
+    </package>
+
+
 
 </struts>
