@@ -158,6 +158,15 @@
         </action>
     </package>
 
-
+    <package name="tip" extends="struts-default">
+        <action name="tip01" class="Tips.tip01Action" method="execute">
+            <result name="success">
+                /标签/控制标签/if-else.jsp
+            </result>
+            <result name="input">
+                /标签/控制标签/if-else.jsp
+            </result>
+        </action>
+    </package>
 
 </struts>
