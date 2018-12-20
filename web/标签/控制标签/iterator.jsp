@@ -6,7 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
@@ -21,7 +20,7 @@
 <br/><br/>
 <b>Employees sorted by Department</b><br/>
 
-<s:bean name="cn.w3cschool.struts2.DepartmentComparator"
+<s:bean name="Tips.Tools.DepartmentComparator"
         var="deptComparator" />
 
 <s:sort comparator="deptComparator" source="employees">
