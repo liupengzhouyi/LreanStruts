@@ -189,8 +189,11 @@
             <result name="success">/标签/数据标签/action标签/input.jsp</result>
         </action>
 
+        <action name="tip02"
+                class="Tips.tip02Action" method="execute">
+            <result name="success">/标签/控制标签/generator.jsp</result>
+        </action>
+
     </package>
-
-
 
 </struts>
