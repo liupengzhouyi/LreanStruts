@@ -167,6 +167,16 @@
                 /标签/控制标签/if-else.jsp
             </result>
         </action>
+
+        <action name="employee"
+                class="Tips.Tools.Employee"
+                method="execute">
+            <result name="success">
+                /标签/控制标签/iterator.jsp
+            </result>
+        </action>
     </package>
+
+
 
 </struts>
