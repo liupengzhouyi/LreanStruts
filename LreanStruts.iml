@@ -28,8 +28,14 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat " level="application_server_libraries" />
-    <orderEntry type="library" name="Struts 2-2.5.14.1" level="project" />
-    <orderEntry type="library" name="org.javassist:javassist:3.24.1-GA" level="project" />
+    <orderEntry type="library" exported="" name="org.javassist:javassist:3.24.1-GA" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 9.0.14" level="application_server_libraries" />
+    <orderEntry type="library" name="commons-fileupload" level="project" />
+    <orderEntry type="library" name="commons-io" level="project" />
+    <orderEntry type="library" name="commons-lang" level="project" />
+    <orderEntry type="library" name="freemarker" level="project" />
+    <orderEntry type="library" name="log4j" level="project" />
+    <orderEntry type="library" name="struts2-core" level="project" />
+    <orderEntry type="library" name="ognl" level="project" />
   </component>
 </module>
